@@ -57,7 +57,39 @@ class AdminController extends Controller
             'role' => 'siswa',
         ]);
 
-        return redirect()->route('admin.siswa.index')->with('success', 'Data siswa berhasil ditambahkan.');
+        return redirect()->route('admin.siswa.index')->with('success', 'Data pegawai berhasil ditambahkan.');
+    }
+
+    public function updateSiswa(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+        
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
+            'password' => 'nullable|string|min:8',
+        ]);
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+        ];
+
+        if ($request->filled('password')) {
+            $data['password'] = Hash::make($request->password);
+        }
+
+        $user->update($data);
+
+        return redirect()->route('admin.siswa.index')->with('success', 'Data pegawai berhasil diperbarui.');
+    }
+
+    public function destroySiswa($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return redirect()->route('admin.siswa.index')->with('success', 'Data pegawai berhasil dihapus.');
     }
 
     public function laporan(Request $request)

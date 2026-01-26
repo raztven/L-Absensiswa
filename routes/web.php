@@ -25,6 +25,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
         Route::get('/siswa', [AdminController::class, 'siswa'])->name('admin.siswa.index');
         Route::post('/siswa', [AdminController::class, 'storeSiswa'])->name('admin.siswa.store');
+        Route::put('/siswa/{id}', [AdminController::class, 'updateSiswa'])->name('admin.siswa.update');
+        Route::delete('/siswa/{id}', [AdminController::class, 'destroySiswa'])->name('admin.siswa.destroy');
         Route::get('/laporan', [AdminController::class, 'laporan'])->name('admin.laporan.index');
         Route::get('/laporan/cetak', [AdminController::class, 'cetakLaporan'])->name('admin.laporan.cetak');
     });

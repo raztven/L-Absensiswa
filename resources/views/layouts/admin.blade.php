@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - E-Absensi</title>
+    <title>Admin Dashboard - E-PEGAWAI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -17,22 +17,22 @@
         <!-- Sidebar -->
         <aside class="w-64 bg-white border-r border-slate-200 hidden md:flex flex-col">
             <div class="p-6 border-b border-slate-100 flex items-center gap-3">
-                <div class="bg-blue-600 p-2 rounded-lg text-white">
-                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                <div class="text-indigo-600">
+                    <i data-lucide="fingerprint" class="w-8 h-8"></i>
                 </div>
-                <span class="text-xl font-bold text-slate-800">Admin Panel</span>
+                <span class="text-xl font-bold text-slate-800 tracking-tighter">E-PEGAWAI</span>
             </div>
             
             <nav class="flex-1 p-4 space-y-2 overflow-y-auto">
-                <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->routeIs('admin.dashboard') ? 'bg-blue-50 text-blue-600 font-semibold' : 'text-slate-600 hover:bg-slate-50' }} transition-colors">
+                <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->routeIs('admin.dashboard') ? 'bg-indigo-50 text-indigo-600 font-semibold' : 'text-slate-600 hover:bg-slate-50' }} transition-colors">
                     <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
                     Dashboard
                 </a>
-                <a href="{{ route('admin.siswa.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->routeIs('admin.siswa.*') ? 'bg-blue-50 text-blue-600 font-semibold' : 'text-slate-600 hover:bg-slate-50' }} transition-colors">
+                <a href="{{ route('admin.siswa.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->routeIs('admin.siswa.*') ? 'bg-indigo-50 text-indigo-600 font-semibold' : 'text-slate-600 hover:bg-slate-50' }} transition-colors">
                     <i data-lucide="users" class="w-5 h-5"></i>
-                    Data Siswa
+                    Data Pegawai
                 </a>
-                <a href="{{ route('admin.laporan.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->routeIs('admin.laporan.*') ? 'bg-blue-50 text-blue-600 font-semibold' : 'text-slate-600 hover:bg-slate-50' }} transition-colors">
+                <a href="{{ route('admin.laporan.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->routeIs('admin.laporan.*') ? 'bg-indigo-50 text-indigo-600 font-semibold' : 'text-slate-600 hover:bg-slate-50' }} transition-colors">
                     <i data-lucide="file-bar-chart" class="w-5 h-5"></i>
                     Laporan
                 </a>
@@ -53,7 +53,7 @@
         <div class="flex-1 flex flex-col h-screen overflow-hidden">
             <!-- Header Mobile -->
             <header class="bg-white border-b border-slate-200 p-4 flex md:hidden justify-between items-center">
-                <div class="font-bold text-slate-800">Admin Panel</div>
+                <div class="font-bold text-slate-800">E-PEGAWAI</div>
                 <button class="text-slate-600">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>

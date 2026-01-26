@@ -21,20 +21,20 @@
         </div>
     </div>
 
-    <!-- Total Siswa -->
+    <!-- Total Pegawai -->
     <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
         <div class="p-3 bg-indigo-100 text-indigo-600 rounded-xl">
             <i data-lucide="users" class="w-8 h-8"></i>
         </div>
         <div>
-            <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Total Siswa</p>
+            <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Total Pegawai</p>
             <h3 class="text-3xl font-bold text-slate-800">{{ $totalSiswa }}</h3>
         </div>
     </div>
 
     <!-- Izin/Sakit -->
     <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
-        <div class="p-3 bg-blue-100 text-blue-600 rounded-xl">
+        <div class="p-3 bg-amber-100 text-amber-600 rounded-xl">
             <i data-lucide="file-text" class="w-8 h-8"></i>
         </div>
         <div>
@@ -48,14 +48,14 @@
 <div class="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
     <div class="px-8 py-6 border-b border-slate-50 flex justify-between items-center">
         <h3 class="text-lg font-bold text-slate-800">Aktivitas Absensi Terbaru</h3>
-        <button class="text-blue-600 text-sm font-bold hover:underline">Lihat Semua</button>
+        <button class="text-indigo-600 text-sm font-bold hover:underline">Lihat Semua</button>
     </div>
 
     <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse">
             <thead>
                 <tr class="bg-slate-50/50">
-                    <th class="px-8 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Nama Siswa</th>
+                    <th class="px-8 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Nama Pegawai</th>
                     <th class="px-8 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Jam Masuk</th>
                     <th class="px-8 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Jam Keluar</th>
                     <th class="px-8 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Keterangan</th>
